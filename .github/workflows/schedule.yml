@@ -1,4 +1,5 @@
 name: Schedule Testing
+
 on:
   schedule:
     - cron: '*/1 * * * *'
