@@ -7,6 +7,9 @@ on:
 
 jobs:
   respond-to-dispatch:
+    strategy:
+      matrix:
+        repo: ['dev']
     runs-on: ubuntu-latest
     steps:
       - name: "Run a script"
