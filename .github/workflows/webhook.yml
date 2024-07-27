@@ -1,0 +1,18 @@
+name: "Webhook Event example"
+
+on:
+  repository_dispatch:
+    types:
+      - webhook
+
+jobs:
+  respond-to-dispatch:    
+    runs-on: ubuntu-latest
+    steps:      
+      - name: "Run a script"
+        if: github.repository == 'victorfim/GitHubExamples/dev'
+        run: 'echo "Event of type: $GITHUB_EVENT_NAME"'
+      
+      - name: "Run a Script"
+        if: github.repository != 'victorfim/GitHubExamples/dev'
+        run: 'echo Wrong repository!'
