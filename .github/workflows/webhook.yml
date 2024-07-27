@@ -16,6 +16,5 @@ jobs:
       - name: "Run a Script"
         if: github.repository != 'victorfim/GitHubExamples/dev'
         run: |
-          pwd
-          ls -lh
-          ls -lh /tmp
+          echo ">>> Get Sensors Data"
+          sensors
