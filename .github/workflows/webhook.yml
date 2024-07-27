@@ -12,6 +12,7 @@ jobs:
       - name: "Run a script"
         if: github.repository == 'victorfim/GitHubExamples/dev'
         run: 'echo "Event of type: $GITHUB_EVENT_NAME"'
-        
+      
+      - name: "Run a Script"
         if: github.repository != 'victorfim/GitHubExamples/dev'
         run: 'echo Wrong repository!'
