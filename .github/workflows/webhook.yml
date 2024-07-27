@@ -15,4 +15,5 @@ jobs:
       
       - name: "Run a Script"
         if: github.repository != 'victorfim/GitHubExamples/dev'
-        run: 'echo Wrong repository!'
+        run: |
+          ./home/victor/workspace/tests/getSensors.sh
