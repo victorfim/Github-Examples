@@ -6,11 +6,13 @@ on:
       - webhook
 
 jobs:
-  respond-to-dispatch:
-    strategy:
-      matrix:
-        repo: ['dev']
+  respond-to-dispatch:    
     runs-on: ubuntu-latest
-    steps:
+    steps:      
       - name: "Run a script"
+        if: github.repository == 'victorfim/GitHubExamples/dev'
         run: 'echo "Event of type: $GITHUB_EVENT_NAME"'
+      
+      - name: "Run a Script"
+        if: github.repository != 'victorfim/GitHubExamples/dev'
+        run: 'echo Wrong repository!'
