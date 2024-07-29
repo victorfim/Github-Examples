@@ -1,0 +1,19 @@
+name: "Various Jobs with Dep"
+
+on: ['push']
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: job1
+        script: |
+          echo "job 1"
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: job2
+        script: |
+          echo "job 2"
