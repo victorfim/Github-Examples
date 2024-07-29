@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: job1
-        script: |
+        run: |
           echo "job 1"
 
   job2:
@@ -15,5 +15,5 @@ jobs:
     needs: job1
     steps:
       - name: job2
-        script: |
+        run: |
           echo "job 2"
