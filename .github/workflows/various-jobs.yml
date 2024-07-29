@@ -2,13 +2,16 @@ name: "Various Jobs with Dep"
 
 on: ['push']
 
+env:
+  var1: ''
+
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - name: job1
         run: |
-          echo "var1=Hello" >> $GITHUB_ENV
+          echo "var1=Hello"
 
   job2:
     runs-on: ubuntu-latest
