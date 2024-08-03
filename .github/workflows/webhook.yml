@@ -7,7 +7,7 @@ on:
 
 jobs:
   respond-to-dispatch:    
-    runs-on: ubtunu-latest
+    runs-on: ubuntu-latest
     steps:      
       - name: "Run a script"
         if: github.repository == 'victorfim/GitHubExamples/dev'
